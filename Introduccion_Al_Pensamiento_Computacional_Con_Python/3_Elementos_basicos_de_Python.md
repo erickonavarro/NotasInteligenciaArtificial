@@ -103,3 +103,10 @@ Podemos pensar en una **clase** como un boceto (prototipo) de una casa. Contiene
 
 Como se pueden hacer muchas casas a partir de un boceto de casa, podemos crear muchos objetos a partir de una clase. Un objeto también se llama instancia de una clase y el proceso de creación de este objeto se llama instanciación.
 
+En el caso de Python un **objeto** va a ser lo que explicamos anteriormente como una **literal** entonces la sintaxis para utilizarlos sería:
+
+```python
+<objeto> <operador> <objeto>
+```
+
+Más adelante se verá qué tipo de operadores se pueden utilizar para cada tipo de objeto. 
