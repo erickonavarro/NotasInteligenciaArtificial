@@ -52,7 +52,7 @@ Cuando se utiliza el operador de suma **+** lo que se hace es concatenar los str
 
 Podemos utilizar la cadena de formato para realizar operaciones con los strings.
 
-```
+```python
 >>> my_str = Erick
 >>> "Yo amo a " + my_str
 'Yo amo a Erick'
@@ -129,7 +129,7 @@ Agregando otros dos puntos podemos decirle a Python que devuelva los caracteres 
 
 El método `capitalize()` se aplica sobre una cadena y la devuelve con su primera letra en mayúscula.
 
-```
+```python
 >>>s = "mi cadena"
 >>>print(s.capitalize()) 
 'mi cadena'
@@ -139,7 +139,7 @@ El método `capitalize()` se aplica sobre una cadena y la devuelve con su primer
 
 El método `lower()` convierte todos los caracteres alfabéticos en minúscula.
 
-```
+```python
 >>>s = "MI CADENA"
 >>>print(s.lower())
 'mi cadena'
@@ -149,7 +149,7 @@ El método `lower()` convierte todos los caracteres alfabéticos en minúscula.
 
 El método `swapcase()` convierte los caracteres alfabéticos con mayúsculas en minúsculas y viceversa.
 
-```
+```python
 >>>s = "mI cAdEnA"
 >>>print(s.swapcase()) 
 'Mi CaDeNa'
@@ -159,7 +159,7 @@ El método `swapcase()` convierte los caracteres alfabéticos con mayúsculas en
 
 El método `upper()` convierte todos los caracteres alfabéticos en mayúsculas.
 
-```
+```python
 >>>s = "mi cadena"
 >>>print(s.upper())
 'MI CADENA'
@@ -169,7 +169,7 @@ El método `upper()` convierte todos los caracteres alfabéticos en mayúsculas.
 
 El método `join()` devuelve la primera cadena unida a cada uno de los elementos de la lista que se le pasa como parámetro.
 
-```
+```python
 >>>s = " y ".join(["1", "2", "3"])
 >>>print(s)
 '1 y 2 y 3'
@@ -179,7 +179,7 @@ El método `join()` devuelve la primera cadena unida a cada uno de los elementos
 
 El método `split()` divide una cadena en subcadenas y las devuelve almacenadas en una lista. La división es realizada de acuerdo a el primer parámetro, y el segundo parámetro indica el número máximo de divisiones a realizar.
 
-```
+```python
 >>>s = "Python,Java,C"
 >>>print(s.split(","))
 ['Python', 'Java', 'C']
@@ -196,7 +196,7 @@ Cual es tu nombre:
 
 En este punto el programa se pausa y espera a que el usuario escriba los datos y después presione `enter` para que el programa pueda continuar.
 
-```
+```python
 >>> num = input("Escribe un numero: ")
 Escribe un numero: 
 >>>print(type(num))
@@ -205,7 +205,7 @@ Escribe un numero:
 
 Observa como la función input devuelve un `sting` y en este caso no nos interesa que sea una cadena si no un entero, para ello se puede utilizar la función `int()` fuera del `input()` para que así se convierta la variable.
 
-```
+```python
 >>> num = int(input("Escribe un numero: "))
 Escribe un numero: 
 >>>print(type(num))
