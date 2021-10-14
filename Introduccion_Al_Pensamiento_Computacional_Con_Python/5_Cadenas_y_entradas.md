@@ -2,7 +2,7 @@
 
 ## Cadenas
 
-Las cadenas en Python o `strings` son un tipo [inmutable](https://ellibrodepython.com/mutabilidad-python) que permite almacenar secuencias de caracteres. Para crear una, es necesario incluir el texto entre comillas dobles `"`. Puedes obtener más ayuda con el comando `help(str).`
+Las cadenas en Python o `strings` son un tipo inmutable que permite almacenar secuencias de caracteres. Para crear una, es necesario incluir el texto entre comillas dobles `"`. Puedes obtener más ayuda con el comando `help(str).`
 
 ```python
 >>>s = "Esto es una cadena"
