@@ -66,4 +66,4 @@ La raiz cudrada de 4 es 1.999975006212548
 --- 64.43787026405334 seconds ---
 ```
 
-Llegando a la solución 1.999975006212548 ¡pero en 64 segundos!. Con los ejemplos anteriores podemos comprobar que si queremos una respuesta más precisa, tendremos que cambiarlo por el tiempo de ejecución. 
+Llegando a la solución 1.999975006212548 ¡pero en 64 segundos!. Con los ejemplos anteriores podemos comprobar que si queremos una respuesta más precisa, se traduce en tiempos más largos para llegar al resultado. 
