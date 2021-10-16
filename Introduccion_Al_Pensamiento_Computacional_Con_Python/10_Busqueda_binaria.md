@@ -12,7 +12,7 @@ Un resumen del algoritmo de búsqueda binaria sería:
 
 El siguiente diagrama es una representación de un array ordenado con 17 elementos. Intentamos localizar la posición del elemento 7. Analicemos el procedimiento paso a paso de cómo se realiza esta tarea.
 
-<img src="https://miro.medium.com/max/700/0*z0or8YYfj3dUmL_h.png" alt="drawing" width="500"/>
+<img src="https://i.imgur.com/1kqi9T9.png" alt="drawing" width="500"/>
 
 El diagrama anterior contiene una lista de 17 elementos que van de 0 a 16. El primer paso es dividir la lista bisecándola en dos mitades con la fórmula antes mencionada de (L+R)//2 que sería (16+0)//2 y devolvería un valor de 8.
 
