@@ -89,3 +89,6 @@ $$
 respuesta = (25 + 0.0) / 2 = 12.5
 $$
 Y en cada iteración el valor de *respuesta* va cambiando, pero son los valores de *bajo* y *alto* los que cambian dependiendo del resultado de la comparación de `respuesta**2 < objetivo`. Entonces el resultado es 4.9999237060546875, nótese como sólo tardo 2.53 segundos utilizando un margen de error de 0.001. Este método hace que lleguemos al resultado en menos iteraciones, haciendo el algoritmo más rápido comparado con el de **enumeración exhaustiva** o **aproximación de soluciones**. 
+
+Notas para el curso de Introducción al pensamiento computacional con Python
+Por Erick Navarro
