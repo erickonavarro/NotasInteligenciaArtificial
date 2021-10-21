@@ -31,3 +31,10 @@ factorial_recursivo(5) # 120
 Lo que realmente hacemos con el código anterior es llamar a la función `factorial_recursivo()` múltiples veces. Es decir, `5!` es igual a `5 * 4!` y `4!` es igual a `4 * 3!` y así sucesivamente hasta llegar a 1.
 
 Algo muy importante a tener en cuenta es que si realizamos demasiadas llamadas a la función, podríamos llegar a tener un error del tipo `RecursionError`. Esto se debe a que todas las llamadas van apilándose y creando un contexto de ejecución, algo que podría llegar a causar un `stack overflow`. Es por eso por lo que Python lanza ese error, para protegernos de llegar a ese punto.
+
+Se es posible modificar el límite de recursividad que tiene Python. Para modificarlo es necesario importar la librería `sys` y escribir el siguiente código:
+
+```python
+sys.setrecursionlimit(n) # n es el nuevo límite a establecer
+```
+
