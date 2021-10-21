@@ -63,6 +63,8 @@ outer_func()
 
 ## Alcance global
 
+Este es el alcance más alto. Los nombres en este ámbito son visibles desde cualquier lugar de su código.
+
 ```python
 x = 100 # global scope
 
@@ -74,6 +76,8 @@ func() # 100
 ```
 
 ## Alcance incorporado
+
+Este alcance contiene nombres como palabras clave, funciones, excepciones y otros atributos que están integrados en Python.
 
 ```python
 dir()
