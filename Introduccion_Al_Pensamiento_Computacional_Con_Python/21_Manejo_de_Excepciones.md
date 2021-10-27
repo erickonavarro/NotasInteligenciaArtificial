@@ -101,14 +101,28 @@ Entra en finally, se ejecuta el bloque finally
 Al ya explicado `try` y `except` le podemos añadir un bloque más, el `else`. Dicho bloque **se ejecutará si no ha ocurrido ninguna excepción**. Fíjate en la diferencia entre los siguientes códigos.
 
 ```python
-try:
-    # Forzamos una excepción al dividir entre 0
-    x = 2/0
-except:
-    print("Entra en except, ha ocurrido una excepción")
-else:
-    print("Entra en else, no ha ocurrido ninguna excepción")
+>>> try:
+>>>     # Forzamos una excepción al dividir entre 0
+>>>     x = 2/0
+>>> except:
+>>>     print("Entra en except, ha ocurrido una excepción")
+>>> else:
+>>>     print("Entra en else, no ha ocurrido ninguna excepción")
 
-#Entra en except, ha ocurrido una excepción
+Entra en except, ha ocurrido una excepción
+```
+
+Sin embargo en el siguiente código la división se puede realizar sin problema, por lo que el bloque `except` no se ejecuta pero el `else` si es ejecutado.
+
+```python
+>>> try:
+>>>     # La división puede realizarse sin problema
+>>>     x = 2/2
+>>> except:
+>>>     print("Entra en except, ha ocurrido una excepción")
+>>> else:
+>>>     print("Entra en else, no ha ocurrido ninguna excepción")
+
+Entra en else, no ha ocurrido ninguna excepción
 ```
 
