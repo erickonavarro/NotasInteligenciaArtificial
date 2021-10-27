@@ -1,0 +1,2 @@
+# Assert Statements en Python
+
