@@ -286,5 +286,22 @@ if __name__ == '__main__':
 
 Con el `assertRaises` nuestro programa ya validará si funciona correctamente el programa en caso de que se realice una división entre cero. 
 
+# Pruebas de Caja de Cristal (Regression testing)
+
+A diferencia de las pruebas de caja negra o **user testing** donde no es necesario conocer la estructura del programa para realizarlas, las **pruebas de caja de cristal** asume que conoces la implementación del código. Algunas generalidades de estas pruebas son:
+
+* Se basan en el flujo del programa
+* Prueba todos los caminos posibles de una función, de las ramificaciones, de los bucles `for` y `while`, así como de las recursiones.
+* Son buenas cuando descubres un bug al correr el programa o **regression testing**.
+
+# Consejos para arreglar tu código
+
+* Encuentra a los sospechosos comunes.
+* En lugar de preguntarte por qué un programa no funciona, pregúntate por qué está funcioanndo de esta manera.
+* Es posible que el bug no se encuentra donde crees que está.
+* Explícale el problema a otra persona. De preferencia que no tenga contexto. Cómprate un pato de hule (Rubber duck debugging
+* Lleva un registro de lo que has tratado, preferentemente en la forma de tests
+* Vete a dormir
+
 
 
