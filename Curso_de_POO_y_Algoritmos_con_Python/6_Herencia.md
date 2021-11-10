@@ -216,3 +216,114 @@ print(Clase3.__mro__)
 ```
 
 Una curiosidad es que al final del todo vemos la clase `object`. Aunque pueda parecer raro, es correcto ya que en realidad todas las clases en Python heredan de una clase genérica `object`, aunque no lo especifiquemos explícitamente.
+
+## Polimorfismo
+
+Al ser un lenguaje con tipado dinámico y permitir duck typing, en Python no es necesario que los objetos compartan un interfaz, simplemente basta con que tengan los métodos que se quieren llamar.
+
+Supongamos que tenemos un clase `Animal` con un método `hablar()`.
+
+```python
+class Animal:
+    def hablar(self):
+        pass
+```
+
+Por otro lado tenemos otras dos clases, `Perro`, `Gato` que heredan de la anterior. Además, implementan el método `hablar()` de una forma distinta.
+
+```python
+class Perro(Animal):
+    def hablar(self):
+        print("Guau!")
+
+class Gato(Animal):
+    def hablar(self):
+        print("Miau!")
+```
+
+A continuación creamos un objeto de cada clase y llamamos al método `hablar()`. Podemos observar que cada animal se comporta de manera distinta al usar `hablar()`.
+
+```
+for animal in Perro(), Gato():
+    animal.hablar()
+
+# Guau!
+# Miau!
+```
+
+En el caso anterior, la variable `animal` ha ido “tomando las formas” de `Perro` y `Gato`. 
+
+## Duck Typing en Python
+
+El duck typing o tipado de pato es un concepto relacionado con la programación que aplica a ciertos lenguajes orientados a objetos, y que tiene origen en la siguiente frase:
+
+> If it walks like a duck and it quacks like a duck, then it must be a duck
+
+Lo que se podría traducir al español como. **Si camina como un pato y habla como un pato, entonces tiene que ser un pato**.
+
+El concepto de duck typing se fundamenta en el razonamiento inductivo, donde una serie de premisas apoyan la conclusión, pero no la garantizan. Si vemos a un animal que parece un pato, habla como tal y anda como tal, sería razonable pensar que se trata de un pato, pero sin un test de ADN nunca estaríamos al cien por cien seguros.
+
+Una vez entendido el origen del concepto, veamos lo que realmente significa esto en Python. En pocas palabras, a Python le dan igual los tipos de los objetos, lo único que le importan son los métodos.
+
+Definamos una clase `Pato` con un método `hablar()`.
+
+```python
+class Pato:
+    def hablar(self):
+        print("¡Cua!, Cua!")
+```
+
+Y llamamos al método de la siguiente forma.
+
+```python
+p = Pato()
+p.hablar()
+# ¡Cua!, Cua!
+```
+
+Hasta aquí nada nuevo, pero vamos a definir una función `llama_hablar()`, que llama al método `hablar()` del objeto que se le pase.
+
+```python
+def llama_hablar(x):
+    x.hablar()
+```
+
+Como puedes observar, en Python **no es necesario especificar los tipos**, simplemente decimos que el parámetro de entrada tiene el nombre `x`, pero no especificamos su tipo.
+
+Cuando Python entra en la función y evalúa `x.hablar()`, le da igual el tipo al que pertenezca `x` siempre y cuando tenga el método `hablar()`. Esto es el *duck typing* en todo su esplendor.
+
+```python
+p = Pato()
+llama_hablar(p)
+# ¡Cua!, Cua!
+```
+
+¿Y qué pasa si usamos otros objetos que no son de la clase `Pato`? Pues bien, como hemos dicho, a la función `llama_hablar()` le da igual el tipo. Lo único que el importa es que el objeto tenga el método `hablar()`.
+
+Definamos tres clases de animales distintas que implementan el método `hablar()`. Nótese que no existe [herencia](https://ellibrodepython.com/herencia-en-python) entre ellas, son clases totalmente independientes. De haberla estaríamos hablando de [polimorfismo](https://ellibrodepython.com/polimorfismo-en-programacion).
+
+```python
+class Perro:
+    def hablar(self):
+        print("¡Guau, Guau!")
+
+class Gato:
+    def hablar(self):
+        print("¡Miau, Miau!")
+
+class Vaca:
+    def hablar(self):
+        print("¡Muuu, Muuu!")
+```
+
+Y como es de esperar la función `llama_hablar()` funciona correctamente con todos los objetos.
+
+```python
+llama_hablar(Perro())
+llama_hablar(Gato())
+llama_hablar(Vaca())
+
+# ¡Guau, Guau!
+# ¡Miau, Miau!
+# ¡Muuu, Muuu!
+```
