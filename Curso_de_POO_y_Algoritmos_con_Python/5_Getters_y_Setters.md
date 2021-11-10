@@ -1,3 +1,5 @@
+# Getters y Setters
+
 En Python, los **getters** y **setters** no son los mismos que en otros lenguajes de programación orientados a objetos. Básicamente, el propósito principal de usar **getters** y **setters** en los programas orientados a objetos es asegurar la encapsulación de datos. Las variables privadas en Python no son realmente campos ocultos como en otros lenguajes orientados a objetos. Los **getters** y **setters** en Python se utilizan a menudo cuando:
 
 * Utilizamos **getters** & **setters** para añadir lógica de validación en torno a la obtención y establecimiento de un valor.
