@@ -42,6 +42,48 @@ Las primeras dos funciones son obvias en su resultado, donde nos mostrarán un m
 
 Pongamos atención en cómo la función `consume_funciones()` se escribe con paréntesis para ser ejecutada, mientras que la función `presentarse` y `estudiemos_juntos` solo hace referencia a estas.
 
+Ahora veamos el siguiente código:
+
+```python
+def funcion_decoradora(funcion):
+	def wrapper():
+		print("Este es el último mensaje...")
+		funcion()
+		print("Este es el primer mensaje ;)")
+	return wrapper
+
+def zumbido():
+	print("Buzzzzzz")
+
+zumbido = funcion_decoradora(zumbido)
+zumbido()
+#Este es el último mensaje...
+#Buzzzzzz
+#Este es el primer mensaje ;)
+```
+
+El código anterior puede simplificarse utilizando el símbolo @:
+
+```python
+def funcion_decoradora(funcion):
+	def wrapper():
+		print("Este es el último mensaje...")
+		funcion()
+		print("Este es el primer mensaje ;)")
+	return wrapper
+
+@funcion_decoradora
+def zumbido():
+	print("Buzzzzzz")
+
+zumbido()
+#Este es el último mensaje...
+#Buzzzzzz
+#Este es el primer mensaje ;)
+```
+
+El signo `@` indica que la función que estás definiendo sea pasada como `argumento ` a la `función/método` que está inmediatamente después del símbolo `@`.
+
 ## Funciones anidadas
 
 Al igual que los condicionales y bucles también puedes colocar funciones dentro de otra función.
@@ -70,3 +112,4 @@ Algunas librerías de Python son: Scikit-learn, NumPy y TensorFlow.
 ```
 
 Debemos considerar que las funciones anidadas dentro de funcion_mayor no se ejecutan hasta que se llama a esta primera, siendo muestra del scope o alcance de las funciones. Si las llamamos obtendremos un error
+
